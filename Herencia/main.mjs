@@ -72,6 +72,7 @@ class Student {
     }
 }
 
+
 class freeStudent extends Student{
     constructor (props) {
         super(props)
