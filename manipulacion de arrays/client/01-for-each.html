@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="id"></div>
+    <script>
+        const app = document.querySelector('.id')
+        const products = [
+            {title: 'Burger', price: 121},
+            {title: 'pizza', price: 122}
+        ]
+        products.forEach(product => {
+            const li = document.createElement('li')
+            li.classList.add('li')
+            li.innerText = product.title + ' ' + product.price
+            app.appendChild(li) 
+        })
+    </script>
+</body>
+</html>

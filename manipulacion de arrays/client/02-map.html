@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="id"></div>
+    <div class="id2"></div>
+    <script>
+        const id = document.querySelector('.id')
+        const id2 = document.querySelector('.id2')
+
+        const products = [
+            {title: 'burger', price: 12},
+            {title: 'water', price: 1.5}
+        ]
+        products.map(item => 
+        {
+            const li = document.createElement('li')
+            li.innerText = item.title + ' price: $' + item.price
+            id.appendChild(li)
+        })
+
+        const products2 = [
+            {title: 'tv', price: 12},
+            {title: 'pc', price: 1.5}
+        ]
+        const arr2 = products2.map(item => 
+        {
+            const li2 = document.createElement('li')
+            return li2.innerText = item.title + ' price: $' + item.price
+        })
+        id2.innerHTML = arr2.join('<br>')
+        
+    </script>
+</body>
+</html>
